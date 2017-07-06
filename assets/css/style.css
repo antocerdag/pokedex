@@ -1,1 +1,25 @@
-style.css
+*{
+	background-color: #E6E6E6;
+	margin: 0;
+	padding: 0;
+	font-family: 'Flexo';
+}
+
+@font-face {
+font-family: 'Flexo';
+src:
+    local('Flexo'),
+    local('Flexo'),
+    url(../font/Flexo/Flexo-Light.otf);
+}
+
+header h2{
+	color: #FC3931;
+	font-size: 47px;
+}
+
+/* BUSCADOR */
+.buscador-input{
+	background-color: transparent;
+    border: none;
+}
