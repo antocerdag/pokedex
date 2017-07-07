@@ -8,7 +8,12 @@ $(document).ready(function() {
 	.done(function(respuesta) {
 		console.log(respuesta);
 		mostrarPokemon(respuesta.results);
+
+	
 	})
+
+
+
 	.fail(function() {
 		console.log("error");
 	})
@@ -20,10 +25,10 @@ $(document).ready(function() {
 		//var pokeID = data.national_id;
 		
 	    var pokeDescription = "";
-	    data.forEach(function(ele){
+	    data.forEach(function(ele,img){
 	    	var pokeName = ele.name;
-	    	
-	    	$("#pokemon").append("<div class='pokelinea1'><img class='pokeimg' src='http://img.pokemondb.net/artwork/"+pokeName+ ".jpg'><span class='namePoke text-center'>"+pokeName+"</span>"+"</div> ");
+	    	var img = img + 1;
+	    	$("#pokemon").append("<a class='waves-effect waves-light btn boton' href='#modal1'><div class='pokelinea1'><img class='pokeimg' src='http://pokeapi.co/media/img/"+img+ ".png'><span class='namePoke text-center'>"+pokeName+"</span>"+"</div> </a>");
 	    })
 	}
 
@@ -43,7 +48,9 @@ $(document).ready(function() {
 	})
 	.done(function(respuesta) {
 		console.log(respuesta);
-		//mostrarInfo(respuesta.results);
+		//mostrarPokemon(respuesta.results);
+		$('#modalpokemon').modal('open');
+        $('#modalpokemon').modal('close');
 	})
 	.fail(function() {
 		console.log("error");
