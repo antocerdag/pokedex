@@ -22,8 +22,8 @@ $(document).ready(function() {
 	    var pokeDescription = "";
 	    data.forEach(function(ele){
 	    	var pokeName = ele.name;
-	    	var pokeimg = $(".pokelinea1").attr('src','http://pokeapi.co/media/img/' + pokeName + '.png');
-	    	$("#pokemon").append("<div class='pokelinea1'>"+ pokeimg+pokeName+"</div> ");
+	    	
+	    	$("#pokemon").append("<div class='pokelinea1'><img class='pokeimg' src='http://img.pokemondb.net/artwork/"+pokeName+ ".jpg'><span class='namePoke text-center'>"+pokeName+"</span>"+"</div> ");
 	    })
 	}
 
@@ -35,7 +35,22 @@ $(document).ready(function() {
 
 	
 
-	
+	$.ajax({
+		url: 'http://pokeapi.co/api/v2/pokemon-species/',
+		type: 'GET',
+		dataType: 'JSON',
+		data: {"limit": '20'},
+	})
+	.done(function(respuesta) {
+		console.log(respuesta);
+		//mostrarInfo(respuesta.results);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 	
 	
 });

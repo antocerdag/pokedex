@@ -29,7 +29,25 @@ header h2{
 
 .pokelinea1{
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0);
     width: 36%;
-    height: 50px;
+    height: 145px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+
+.pokeimg{
+    position: absolute;
+    width: 9%;
+    height: 83px;
+    border-radius: 39px;
+    margin-left: -50px;
+
+}
+.namePoke{
+    position: absolute;
+    margin-top: 96px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: -36px;
 }
