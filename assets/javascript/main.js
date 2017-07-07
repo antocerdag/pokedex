@@ -22,8 +22,8 @@ $(document).ready(function() {
 	    var pokeDescription = "";
 	    data.forEach(function(ele){
 	    	var pokeName = ele.name;
-	    	
-	    	$("#pokemon").append("<div class='pokelinea1'>"+pokeName+"</div> ");
+	    	var pokeimg = $(".pokelinea1").attr('src','http://pokeapi.co/media/img/' + pokeName + '.png');
+	    	$("#pokemon").append("<div class='pokelinea1'>"+ pokeimg+pokeName+"</div> ");
 	    })
 	}
 
