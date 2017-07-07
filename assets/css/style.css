@@ -23,3 +23,13 @@ header h2{
 	background-color: transparent;
     border: none;
 }
+
+
+/* */
+
+.pokelinea1{
+    display: inline-block;
+    border: 1px solid black;
+    width: 36%;
+    height: 50px;
+}
